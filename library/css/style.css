@@ -1,0 +1,1364 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 106, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 11, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 43, ../scss/style.scss */
+html, body {
+  height: 100%;
+  font-family: Roboto, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+/* line 44, ../scss/style.scss */
+menu {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 45, ../scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 45, ../scss/style.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+/* line 46, ../scss/style.scss */
+h1 {
+  font-size: 3em;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+/* line 47, ../scss/style.scss */
+h2 {
+  font-size: 2.25em;
+  line-height: 1.33333em;
+  font-weight: 500;
+}
+
+/* line 48, ../scss/style.scss */
+h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 500;
+}
+
+/* line 49, ../scss/style.scss */
+h4 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+/* line 50, ../scss/style.scss */
+h5 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  font-weight: 300;
+}
+
+/* line 51, ../scss/style.scss */
+p, ul, ol, .breadcrumbs, nav {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 52, ../scss/style.scss */
+strong {
+  font-weight: 500;
+}
+
+/* line 60, ../scss/style.scss */
+.fundo-amarelo, #banner {
+  background-color: #5900b2;
+  color: white;
+}
+
+/* line 64, ../scss/style.scss */
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/* line 28, ../scss/breakpoints/_base.scss */
+#banner {
+  overflow: hidden;
+}
+/* line 31, ../scss/breakpoints/_base.scss */
+#banner a {
+  color: white;
+  text-decoration: none;
+}
+/* line 32, ../scss/breakpoints/_base.scss */
+#banner div {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+#banner div:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 33, ../scss/breakpoints/_base.scss */
+#banner div figure {
+  display: none;
+}
+/* line 34, ../scss/breakpoints/_base.scss */
+#banner h1 {
+  border-top: 30px solid #FFEF0C;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 1em;
+}
+
+/* line 38, ../scss/breakpoints/_base.scss */
+#stuff {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+#stuff:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 40, ../scss/breakpoints/_base.scss */
+#stuff article {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 2em;
+  border-bottom: 1px solid #eee;
+}
+/* line 41, ../scss/breakpoints/_base.scss */
+#stuff article h1 {
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+/* line 42, ../scss/breakpoints/_base.scss */
+#stuff article a {
+  color: #9D2D3F;
+}
+/* line 43, ../scss/breakpoints/_base.scss */
+#stuff article ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+/* line 46, ../scss/breakpoints/_base.scss */
+menu {
+  padding: 1em 3em;
+  background-color: #eee;
+}
+/* line 48, ../scss/breakpoints/_base.scss */
+menu li {
+  margin-bottom: 0.8em;
+}
+/* line 49, ../scss/breakpoints/_base.scss */
+menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 54, ../scss/breakpoints/_base.scss */
+footer {
+  padding: 0 2em;
+}
+/* line 56, ../scss/breakpoints/_base.scss */
+footer .aqui {
+  background-color: red;
+  padding: 6px 15px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+/* line 71, ../scss/breakpoints/_base.scss */
+.nav {
+  border-bottom: 0;
+  /* end .menu li */
+}
+/* line 75, ../scss/breakpoints/_base.scss */
+.nav li a {
+  padding: 3px 6px;
+}
+/* line 77, ../scss/breakpoints/_base.scss */
+.nav li:first-child {
+  margin-top: 0;
+}
+/* line 78, ../scss/breakpoints/_base.scss */
+.nav li:last-child {
+  margin-bottom: 0;
+}
+/* line 79, ../scss/breakpoints/_base.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-left: 2em;
+  list-style-type: disc;
+}
+/* line 83, ../scss/breakpoints/_base.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  margin-bottom: 0;
+  border: none;
+}
+/* line 95, ../scss/breakpoints/_base.scss */
+.nav li.current-menu-item {
+  background-color: transparent;
+}
+/* line 96, ../scss/breakpoints/_base.scss */
+.nav li.current-menu-item a {
+  color: #222222;
+  background-color: white;
+}
+/* line 98, ../scss/breakpoints/_base.scss */
+.nav li.current-menu-item ul.sub-menu li.menu-item a {
+  background-color: transparent;
+  color: #222222;
+  padding: 0;
+}
+
+/* end .nav */
+/* line 102, ../scss/breakpoints/_base.scss */
+ul.sub-menu, ul.children {
+  display: none;
+}
+
+/* line 104, ../scss/breakpoints/_base.scss */
+.current_page_item.menu-item-has-children ul.sub-menu, .current_page_item.menu-item-has-children ul.children {
+  display: block !important;
+}
+
+/* line 107, ../scss/breakpoints/_base.scss */
+.current-page-ancestor ul.sub-menu, .current-page-ancestor ul.children {
+  display: block !important;
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 113, ../scss/breakpoints/_base.scss */
+#content {
+  margin-top: 1.5em;
+}
+
+/* line 117, ../scss/breakpoints/_base.scss */
+.hentry {
+  margin-bottom: 1.5em;
+}
+/* line 120, ../scss/breakpoints/_base.scss */
+.hentry header {
+  padding: 1.5em 0;
+}
+/* line 124, ../scss/breakpoints/_base.scss */
+.hentry footer {
+  padding: 1.5em;
+}
+/* line 127, ../scss/breakpoints/_base.scss */
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+/* line 134, ../scss/breakpoints/_base.scss */
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+
+/* post by id (i.e. post-3) */
+/* general post style */
+/* line 142, ../scss/breakpoints/_base.scss */
+.page .hentry {
+  margin-bottom: 0;
+}
+
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+/* line 151, ../scss/breakpoints/_base.scss */
+.byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* entry content */
+/* line 160, ../scss/breakpoints/_base.scss */
+.entry-content {
+  padding: 1.5em 1.5em 0;
+  /*
+  image alignment on a screen this size may be
+  a bit difficult. It's set to start aligning
+  and floating images at the next breakpoint,
+  but it's up to you. Feel free to change it up.
+  */
+}
+/* line 163, ../scss/breakpoints/_base.scss */
+.entry-content p {
+  margin: 0 0 1.5em;
+}
+/* line 188, ../scss/breakpoints/_base.scss */
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em;
+}
+/* line 193, ../scss/breakpoints/_base.scss */
+.entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #9fa6b4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 202, ../scss/breakpoints/_base.scss */
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2;
+}
+/* line 205, ../scss/breakpoints/_base.scss */
+.entry-content tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+/* line 210, ../scss/breakpoints/_base.scss */
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2;
+}
+/* line 214, ../scss/breakpoints/_base.scss */
+.entry-content td:last-child {
+  border-right: 0;
+}
+/* line 219, ../scss/breakpoints/_base.scss */
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2;
+}
+/* line 224, ../scss/breakpoints/_base.scss */
+.entry-content th:last-child {
+  border-right: 0;
+}
+/* line 229, ../scss/breakpoints/_base.scss */
+.entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #2980b9;
+  font-style: italic;
+  color: #9fa6b4;
+}
+/* line 244, ../scss/breakpoints/_base.scss */
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+/* line 251, ../scss/breakpoints/_base.scss */
+.entry-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+/* line 267, ../scss/breakpoints/_base.scss */
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+/* line 276, ../scss/breakpoints/_base.scss */
+.entry-content pre {
+  background: #222222;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* end .entry-content */
+/* line 287, ../scss/breakpoints/_base.scss */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+/* line 293, ../scss/breakpoints/_base.scss */
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+/* line 299, ../scss/breakpoints/_base.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/* line 333, ../scss/breakpoints/_base.scss */
+.tags {
+  margin: 0;
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+/* line 341, ../scss/breakpoints/_base.scss */
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+
+/* line 346, ../scss/breakpoints/_base.scss */
+.pagination ul {
+  display: inline-block;
+  background-color: white;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+/* line 355, ../scss/breakpoints/_base.scss */
+.pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid #eaedf2;
+}
+/* line 364, ../scss/breakpoints/_base.scss */
+.pagination a, .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #2980b9;
+}
+/* line 376, ../scss/breakpoints/_base.scss */
+.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+  background-color: #2980b9;
+  color: white;
+}
+/* line 382, ../scss/breakpoints/_base.scss */
+.pagination .current {
+  cursor: default;
+  color: #5c6b80;
+}
+/* line 386, ../scss/breakpoints/_base.scss */
+.pagination .current:hover, .pagination .current:focus {
+  background-color: white;
+  color: #5c6b80;
+}
+
+/* end .bones_page_navi */
+/* fallback previous & next links */
+/* line 399, ../scss/breakpoints/_base.scss */
+.wp-prev-next .prev-link {
+  float: left;
+}
+/* line 403, ../scss/breakpoints/_base.scss */
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+/* line 414, ../scss/breakpoints/_base.scss */
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa;
+  /* number of comments span */
+}
+
+/* line 434, ../scss/breakpoints/_base.scss */
+.commentlist {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 439, ../scss/breakpoints/_base.scss */
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */
+}
+/* line 446, ../scss/breakpoints/_base.scss */
+.comment .comment-author {
+  padding: 7px;
+  border: 0;
+}
+/* line 452, ../scss/breakpoints/_base.scss */
+.comment .vcard {
+  margin-left: 50px;
+}
+/* line 455, ../scss/breakpoints/_base.scss */
+.comment .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+/* line 463, ../scss/breakpoints/_base.scss */
+.comment .vcard time {
+  display: block;
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* line 468, ../scss/breakpoints/_base.scss */
+.comment .vcard time a {
+  color: #9fa6b4;
+  text-decoration: none;
+}
+/* line 472, ../scss/breakpoints/_base.scss */
+.comment .vcard time a:hover {
+  text-decoration: underline;
+}
+/* line 482, ../scss/breakpoints/_base.scss */
+.comment .vcard .avatar {
+  position: absolute;
+  left: 16px;
+  border-radius: 50%;
+}
+/* line 490, ../scss/breakpoints/_base.scss */
+.comment:last-child {
+  margin-bottom: 0;
+}
+/* line 494, ../scss/breakpoints/_base.scss */
+.comment .children {
+  margin: 0;
+  /* variations */
+  /* change number for different depth */
+}
+/* line 512, ../scss/breakpoints/_base.scss */
+.comment[class*=depth-] {
+  margin-top: 1.1em;
+}
+/* line 516, ../scss/breakpoints/_base.scss */
+.comment.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+/* line 521, ../scss/breakpoints/_base.scss */
+.comment:not(.depth-1) {
+  margin-top: 0;
+  margin-left: 7px;
+  padding: 7px;
+}
+/* line 534, ../scss/breakpoints/_base.scss */
+.comment.odd {
+  background-color: white;
+}
+/* line 537, ../scss/breakpoints/_base.scss */
+.comment.even {
+  background: #f8f9fa;
+}
+
+/* comment meta */
+/* comment content */
+/* line 571, ../scss/breakpoints/_base.scss */
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* end .commentlist .comment_content */
+/* comment reply link */
+/* line 580, ../scss/breakpoints/_base.scss */
+.comment-reply-link {
+  /* @extend .blue-btn; */
+  font-size: 0.9em;
+  float: right;
+}
+
+/* end .commentlist .comment-reply-link */
+/* edit comment link */
+/* line 592, ../scss/breakpoints/_base.scss */
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+/* line 605, ../scss/breakpoints/_base.scss */
+.comment-respond {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+
+/* line 610, ../scss/breakpoints/_base.scss */
+#reply-title {
+  margin: 0;
+}
+
+/* line 614, ../scss/breakpoints/_base.scss */
+.logged-in-as {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+/* line 619, ../scss/breakpoints/_base.scss */
+.logged-in-as a {
+  color: #5c6b80;
+}
+
+/* line 624, ../scss/breakpoints/_base.scss */
+.comment-form-comment {
+  margin: 1.5em 0 0.75em;
+}
+
+/* line 628, ../scss/breakpoints/_base.scss */
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+}
+
+/* comment submit button */
+/* line 635, ../scss/breakpoints/_base.scss */
+#submit {
+  /* @extend .blue-btn; */
+  float: right;
+  font-size: 1em;
+}
+
+/* comment form title */
+/* line 642, ../scss/breakpoints/_base.scss */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+/* line 655, ../scss/breakpoints/_base.scss */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+/* line 660, ../scss/breakpoints/_base.scss */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 676, ../scss/breakpoints/_base.scss */
+.widget ul li {
+  /* deep nesting */
+}
+
+/* line 693, ../scss/breakpoints/_base.scss */
+.no-widgets {
+  background-color: white;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* line 706, ../scss/breakpoints/_base.scss */
+.footer {
+  clear: both;
+  background-color: #222222;
+  color: #f8f9fa;
+}
+
+/*
+if you checked out the link above:
+http://www.alistapart.com/articles/organizing-mobile/
+you'll want to style the footer nav
+a bit more in-depth. Remember to keep
+it simple because you'll have to
+override these styles for the desktop
+view.
+*/
+/* end .footer-links */
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection.
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /*
+  IMPORTANT NOTE ABOUT SASS 3.3 & UP
+  You can't use @extend within media queries
+  anymore, so just be aware that if you drop
+  them in here, they won't work.
+  */
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* .menu is clearfixed inside mixins.scss */
+  /* line 49, ../scss/breakpoints/_481up.scss */
+  .menu {
+    /* end .menu ul */
+  }
+  /* line 50, ../scss/breakpoints/_481up.scss */
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 51, ../scss/breakpoints/_481up.scss */
+  .menu ul li {
+    /*
+    plan your menus and drop-downs wisely.
+    */
+  }
+  /* line 52, ../scss/breakpoints/_481up.scss */
+  .menu ul li a {
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+
+  /* end .menu */
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  /* line 97, ../scss/breakpoints/_481up.scss */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 101, ../scss/breakpoints/_481up.scss */
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 106, ../scss/breakpoints/_481up.scss */
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 111, ../scss/breakpoints/_481up.scss */
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+  /* end .entry-content */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
+  /* end .footer-links */
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /* line 14, ../scss/breakpoints/_768up.scss */
+  #banner {
+    overflow: hidden;
+    height: 25%;
+    position: relative;
+  }
+  /* line 17, ../scss/breakpoints/_768up.scss */
+  #banner div {
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  #banner div:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 18, ../scss/breakpoints/_768up.scss */
+  #banner div figure {
+    display: block;
+    width: 20.45455%;
+    float: left;
+    margin-right: 2.27273%;
+    height: 100%;
+    background-color: #FFEF0C;
+  }
+  /* line 19, ../scss/breakpoints/_768up.scss */
+  #banner div div {
+    width: 65.90909%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 20, ../scss/breakpoints/_768up.scss */
+  #banner div div span {
+    position: absolute;
+    bottom: 0;
+  }
+  /* line 22, ../scss/breakpoints/_768up.scss */
+  #banner h1 {
+    padding: 0;
+    line-height: 15px;
+    letter-spacing: 3px;
+    margin: 0;
+    border-top: none;
+  }
+  /* line 23, ../scss/breakpoints/_768up.scss */
+  #banner h1:hover {
+    line-height: 28px;
+  }
+
+  /* line 26, ../scss/breakpoints/_768up.scss */
+  #stuff {
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  #stuff:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 28, ../scss/breakpoints/_768up.scss */
+  #stuff article {
+    width: 65.90909%;
+    float: right;
+    margin-right: 0;
+    padding: 4em 0 2em 0;
+  }
+
+  /* line 31, ../scss/breakpoints/_768up.scss */
+  menu {
+    padding: 4em 0 0 0;
+    width: 20.45455%;
+    float: left;
+    margin-right: 2.27273%;
+    padding-left: 1em;
+  }
+  /* line 34, ../scss/breakpoints/_768up.scss */
+  menu a {
+    text-decoration: none;
+    color: black;
+  }
+  /* line 34, ../scss/breakpoints/_768up.scss */
+  menu a:hover {
+    text-decoration: underline;
+  }
+  /* line 35, ../scss/breakpoints/_768up.scss */
+  menu li {
+    margin-bottom: 1em;
+  }
+  /* line 36, ../scss/breakpoints/_768up.scss */
+  menu .children {
+    padding-left: 2.2em;
+    list-style-type: lower-greek;
+  }
+  /* line 38, ../scss/breakpoints/_768up.scss */
+  menu .children li {
+    margin-bottom: 0;
+  }
+
+  /* line 42, ../scss/breakpoints/_768up.scss */
+  footer {
+    padding: 0;
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  footer:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 45, ../scss/breakpoints/_768up.scss */
+  footer nav {
+    width: 65.90909%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /* line 56, ../scss/breakpoints/_768up.scss */
+  .sidebar {
+    margin-top: 2.2em;
+  }
+
+  /* line 60, ../scss/breakpoints/_768up.scss */
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+
+  /* line 65, ../scss/breakpoints/_768up.scss */
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  /* line 70, ../scss/breakpoints/_768up.scss */
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  /* line 78, ../scss/breakpoints/_768up.scss */
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  /* line 186, ../scss/breakpoints/_768up.scss */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */
+  }
+
+  /* end .footer-links */
+}
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+  
+  ******************************************************************/
+  /* line 13, ../scss/breakpoints/_1030up.scss */
+  #banner div {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  #banner div:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  /* line 16, ../scss/breakpoints/_1030up.scss */
+  #stuff {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  #stuff:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 19, ../scss/breakpoints/_1030up.scss */
+  #stuff article p {
+    max-width: 90%;
+  }
+
+  /* line 23, ../scss/breakpoints/_1030up.scss */
+  menu {
+    padding-left: 2em;
+  }
+
+  /* line 27, ../scss/breakpoints/_1030up.scss */
+  footer {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  footer:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  /* line 13, ../scss/partials/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 21, ../scss/partials/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 26, ../scss/partials/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 31, ../scss/partials/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 36, ../scss/partials/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 42, ../scss/partials/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 47, ../scss/partials/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 51, ../scss/partials/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 55, ../scss/partials/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 63, ../scss/partials/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 68, ../scss/partials/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 74, ../scss/partials/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+#banner {
+	div {@include container(75%);}
+}
+
+#stuff {
+	@include container(75%); 
+	article {
+		p {max-width: 90%;}
+	}
+}
+
+menu {
+	padding-left: 2em;
+}
+
+footer {
+	@include container(75%);
+	}
