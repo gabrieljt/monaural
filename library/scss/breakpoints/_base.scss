@@ -32,7 +32,7 @@ $disabled-gray:     #cfcfcf;
 	div {@include container;
 		figure {display: none;}}
 	h1 {border-top: 30px solid #FFEF0C;
-		font-weight: bold; letter-spacing: 1px; margin: 0; padding: 1em;}
+		font-weight: bold; letter-spacing: 1px; margin: 0; padding: 0.5em 1em;}
 }
 
 #stuff {
@@ -44,17 +44,41 @@ $disabled-gray:     #cfcfcf;
 }
 
 menu {
-	padding: 1em 3em; background-color: #eee;
-	li {margin-bottom: 0.8em;}
+	nav {padding-left: 1em; padding-right: 1em;}
+	padding: 0.5em 3em; background-color: #eee;
+	li {margin-bottom: 0.8em; display: none;}
+	li.current-menu-item, li.current-page-parent, li.current-page-ancestor {display: list-item; li {display: list-item;}}
 	a {text-decoration: none; color: black;}
+	.sidebar, .breadcrumbs {display: none;}
 }
 
+body.home menu nav li, body.single menu nav li {display: list-item;}
 
+body.archive, body.category, body.blog, body.author, body.single {
+	menu nav {display: none;}
+	menu nav.breadcrumbs {display: block;}
+}
+
+body.blog menu {display: none;}
 
 footer {
-	padding: 0 2em;
-	.aqui {background-color: red; padding: 6px 15px; text-transform: uppercase; color: white;}
+	padding: 0;
+	.footer-links {
+		@include horizontal-list; padding: 4em 2em 2em 2em; li {margin-bottom: 2em;}
+		background-color: $violeta; border-top: 10px solid $amarelo; margin: 0; 
+		ul {margin: 0;}
+		li a {background-color: black; color: white; text-transform: lowercase; letter-spacing: 1px; 
+			padding: 12px 15px;}
+		li.current-menu-item {a {background-color: black; color: $amarelo;}}
+	}
 }
+.aqui {background-color: red; padding: 6px 15px 6px 2em; font-weight: 400;
+		margin-right: 0.5em; text-transform: uppercase; color: white;}
+menu .aqui {
+	color: black; display: block;
+		padding: 0; background-color: transparent; font-weight: 500;
+}
+menu .breadcrumbs {text-transform: none; a {color: $violeta;}}
 
 /*********************
 NAVIGATION STYLES

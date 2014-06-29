@@ -34,10 +34,9 @@ $susy: (
   );
 @include border-box-sizing;
 
-@import url(http://fonts.googleapis.com/css?family=PT+Mono);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
 
-$mono : 'Pt Mono', Consolas, Courier, monospace;
+$mono : Menlo, Consolas, Courier, monospace;
 $sans : Roboto, Helvetica, Arial, "Lucida Grande", sans-serif;
 
 html, body {height: 100%; font-family: $sans; font-weight: 300;}
@@ -53,7 +52,7 @@ strong {font-weight: 500;}
 
 
 // variables
-$amarelo: #FFD24D;
+$amarelo: #FFEF0C;
 $violeta: #5900B2;
 
 // stylus

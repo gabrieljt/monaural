@@ -14,30 +14,43 @@ come into play. Have fun!
 #banner {
 	overflow: hidden;
 	height: 25%; position: relative;
-	div {@include container(94%); height: 100%; 
-		figure {display: block; @include span(2 of 9); height: 100%; background-color: #FFEF0C;}
+	div {@include container(100%); height: 100%; 
+		figure {display: block; @include span(3 of 12); height: 100%; background-color: $amarelo;}
 		div {@include span(6 of 9 last);
 			span {position: absolute; bottom: 0;}}
 		}
-	h1 {padding: 0; line-height: 15px; letter-spacing: 3px; margin: 0; border-top: none;}
-	h1:hover {line-height: 28px;}
+	h1 {padding: 0; line-height: 28px; letter-spacing: 3px; margin: 0; border-top: none;}
+	h1:hover {line-height: 15px;}
 }
 
 #stuff {
-	@include container(94%); 
-	article {@include span(6 of 9 last); padding: 4em 0 2em 0;}
+	@include container(100%); 
+	article {@include span(6 of 9 last); padding: 4em 2em 2em 0;}
 }
 
 menu {
 	padding: 4em 0 0 0;
-	@include span(2 of 9); padding-left: 1em;
+	@include span(3 of 12); 
 	a {text-decoration: none; color: black;} a:hover {text-decoration: underline;}
-	li {margin-bottom: 1em}
-	.children {padding-left: 2.2em;
+	li {margin-bottom: 1em; display: list-item;}
+	.children {
 		list-style-type: lower-greek;
 		li {margin-bottom: 0;}
 	}
+
+	.sidebar {
+		display: block; background-color: $amarelo; overflow: auto;
+		text-transform: none; padding: 4em 1em 0 1em;
+	h4 {border: 0; font-weight: 700;}
+	}
 }
+
+
+body.archive, body.category, body.blog, body.author, body.single {
+	menu nav {display: block;}
+}
+menu nav.breadcrumbs {display: none !important;}
+
 
 footer {
 	padding: 0;
@@ -54,11 +67,10 @@ body {}
 
 
 .sidebar {
-	margin-top: 2.2em;
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		border-bottom: 1px solid #eee;
 		margin-bottom: 0.75em;
 	}
 
@@ -162,7 +174,10 @@ body {}
 	.widget_recent_comments {}
 
 	/* search widget */
-	#searchform {}
+	#searchform {
+		input {width: 100%; }
+		#searchsubmit {width: 50%; background-color: white; border: 1px solid black; padding: 1em 2em;}
+	}
 	.widget_search {}
 	.screen-reader-text {}
 
@@ -170,30 +185,3 @@ body {}
 	.textwidget {}
 	.widget_text {}
 	.textwidget p {}
-
-
-/*********************
-FOOTER STYLES
-*********************/
-
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
-	}
-} /* end .footer-links */
-

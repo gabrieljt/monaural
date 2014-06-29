@@ -51,21 +51,6 @@
 <section id="stuff">
 
 <menu>
-<!-- <ul>
-<li class="nav_empresa"><a href="empresa.html" class="current">artes visuais</a>
-	<ul class="children">
-		<li>desenho</li>
-		<li>gravura</li>
-		<li>pintura</li>
-		<li>web art</li>
-	</ul>
-</li>
-<li class="nav_servicos"><a href="servicos.html">publicações</a></li>
-<li class="nav_galeria"><a href="galeria.html">web design</a></li>
-<li class="nav_contato"><a href="contato.html">pesquisa</a></li>
-<li class="nav_about"><a href="about.html">bio</a></li>
-<li class="nav_about"><a href="about.html">contato</a></li>
-</ul> -->
 
 <nav role="navigation">
 <?php wp_nav_menu(array(
@@ -85,4 +70,6 @@
 
 </nav>
 
+<?php get_sidebar(); ?>
+<?php the_breadcrumb(); ?>
 </menu>
